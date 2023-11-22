@@ -1,1 +1,1 @@
-# aoc2024
+# AoC 2023 solutions

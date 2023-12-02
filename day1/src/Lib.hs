@@ -11,10 +11,10 @@ solve2 :: [String] -> Int
 solve2 = sum . map assembleInt
 
 assembleIntStrict :: String -> Int
-assembleIntStrict x = read $ [getFirstDigitStrict x] ++ [getFirstDigitStrict $ reverse x]
+assembleIntStrict x = read $ (getFirstDigitStrict x):[getFirstDigitStrict $ reverse x]
 
 assembleInt :: String -> Int
-assembleInt x = read $ [getFirstDigit x] ++ [getFirstDigitReversed $ reverse x]
+assembleInt x = read $ (getFirstDigit x):[getFirstDigitReversed $ reverse x]
 
 getFirstDigitStrict :: String -> Char
 getFirstDigitStrict [] = error "Invalid input"
